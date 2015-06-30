@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE JobConfiguration PUBLIC "" "JobConfig.dtd">
+
+<!-- <JobConfiguration JobName="ExampleCycleJob" OutputLevel="VERBOSE"> aa-->
+<JobConfiguration JobName="ExampleCycleJob" OutputLevel="INFO">
+<!--
+	<Library Name="libfastjet"/>
+	<Library Name="libSFramePlugIns"/>
+	<Library Name="libSFrameTools"/>
+	<Library Name="libAnalysis"/>
+-->
+
+        <Library Name="libfastjet" />
+        <Library Name="libfastjettools" />
+        <Library Name="libJetMETObjects" />
+        <Library Name="libSFrameTools" />
+        <Library Name="libAnalysis" />
+        <Library Name="libSFramePlugIns" />
+
+
+	<Package Name="SFrameCore.par" />
+	<Package Name="SFramePlugIns.par" />
+	<Package Name="Analysis.par" />
+
+<!--	<Cycle Name="ExampleCycle" RunMode="PROOF" ProofServer="lite://"  ProofWorkDir="" OutputDirectory="./" PostFix="" TargetLumi="1.0"> 15916.0-->
+<!--	<Cycle Name="ExampleCycle"  RunMode="PROOF" ProofServer="lite://"  ProofWorkDir="/scratch/hh/lustre/cms/user/peiffer/PROOF/" OutputDirectory="Output/" PostFix="" TargetLumi="1" > -->
+<!--	<Cycle Name="ExampleCycle2" OutputDirectory="/scratch/hh/dust/naf/cms/user/usai/" PostFix="" TargetLumi="15916.0">-->
+  	<Cycle Name="ExampleCycle2"  RunMode="PROOF" ProofServer="lite://"  ProofWorkDir="/scratch/hh/dust/naf/cms/user/usai/PROOF/" OutputDirectory="/scratch/hh/dust/naf/cms/user/usai/" PostFix="" TargetLumi="15916.0" >
+<!--
+		<InputData Lumi="1.0" NEventsMax="-1" Type="DATA" Version="DATA" Cacheable="False">
+		        <In FileName="/scratch/hh/dust/naf/cms/user/peiffer/Analysis53X/SelectionMuon/ZprimeSelectionCycle.DATA.DATA.root" Lumi="0.0"/> 
+			<InputTree Name="AnalysisTree" /> 
+		</InputData> 
+-->
+<!--		<InputData Lumi="474297.5" NEventsMax="-1" Type="MC" Version="TTbarsemi" Cacheable="False">-->
+		        <!--In FileName="/scratch/hh/dust/naf/cms/user/peiffer/Analysis53X/SelectionMuon/ZprimeSelectionCycle.MC.TTbar.root" Lumi="0.0"/--> 
+                        <!--In FileName="/afs/naf.desy.de/user/u/usai/scratch/sw/subjetbtag/CMSSW_5_3_8/src/UHHAnalysis/NtupleWriter/ntuple.root" Lumi="0.0"/--> 
+                     <!--   <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbsm_prova/ntuple.root" Lumi="0.0"/> -->
+ <!--                      <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.TTbarsemi.root" Lumi="0.0"/>
+			<InputTree Name="AnalysisTree" /> 
+		</InputData> 
+-->		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		<InputData Lumi="1" NEventsMax="-1" Type="DATA" Version="DATA" Cacheable="False">
+		       <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.DATA.DATA.root"  Lumi="0.0"/>
+		       <InputTree Name="AnalysisTree" /> 
+		       <OutputTree Name="AnalysisTree" />
+		</InputData> 
+		
+		
+		
+		<InputData Lumi="240415.865411926" NEventsMax="-1" Type="MC" Version="TTbarsemi" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.TTbarsemi.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="489508.631683986" NEventsMax="-1" Type="MC" Version="TTbarlept" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.TTbarlept.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="386166.402125665" NEventsMax="-1" Type="MC" Version="TTbarhad" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.TTbarhad.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+<!--		<InputData Lumi="2273.544037169" NEventsMax="-1" Type="MC" Version="WJets1" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.WJets1.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+-->
+
+		<InputData Lumi="9409.163799132" NEventsMax="-1" Type="MC" Version="WJets2" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.WJets2.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="24083.548579298" NEventsMax="-1" Type="MC" Version="WJets3" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.WJets3.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="49654.754319152" NEventsMax="-1" Type="MC" Version="WJets4" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.WJets4.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="25523.657035344" NEventsMax="-1" Type="MC" Version="ZJets1" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.ZJets1.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="53525.778353305" NEventsMax="-1" Type="MC" Version="ZJets2" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.ZJets2.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="173067.335317322" NEventsMax="-1" Type="MC" Version="ZJets3" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.ZJets3.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="229886.646915182" NEventsMax="-1" Type="MC" Version="ZJets4" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.ZJets4.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="79320.454545455" NEventsMax="-1" Type="MC" Version="singleTbars" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.singleTbars.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="62872.475570033" NEventsMax="-1" Type="MC" Version="singleTbart" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.singleTbart.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="44275.945945946" NEventsMax="-1" Type="MC" Version="singleTbartW" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.singleTbartW.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="68384.168865435" NEventsMax="-1" Type="MC" Version="singleTs" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.singleTs.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="66456.648936171" NEventsMax="-1" Type="MC" Version="singleTt" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.singleTt.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="44644.954954955" NEventsMax="-1" Type="MC" Version="singleTtW" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.singleTtW.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="182029.815091725" NEventsMax="-1" Type="MC" Version="doubleWW" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.doubleWW.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="285918.066847335" NEventsMax="-1" Type="MC" Version="doubleWZ" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.doubleWZ.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+
+		<InputData Lumi="1213581.709889564" NEventsMax="-1" Type="MC" Version="doubleZZ" Cacheable="False">
+                        <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.doubleZZ.root"  Lumi="0.0"/>
+                        <InputTree Name="AnalysisTree" /> 
+                </InputData>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+  <!--474297.5/-->
+    <!--246164.208753925/-->
+		
+
+  <!--
+  
+    <InputData Lumi="240415.27783241" NEventsMax="-1" Type="MC" Version="TTbarsemi" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.TTbarsemi.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" /> 
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="489508.631683986" NEventsMax="-1" Type="MC" Version="TTbarlept" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.TTbarlept.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" /> 
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="4265.545185185" NEventsMax="-1" Type="MC" Version="WJets1" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.WJets1.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="19400.377142857" NEventsMax="-1" Type="MC" Version="WJets2" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.WJets2.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="29715.454720617" NEventsMax="-1" Type="MC" Version="WJets3" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.WJets3.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="61266.453271028" NEventsMax="-1" Type="MC" Version="WJets4" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.WJets4.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="38311.34402852" NEventsMax="-1" Type="MC" Version="ZJets1" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.ZJets1.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="118918.674033149" NEventsMax="-1" Type="MC" Version="ZJets2" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.ZJets2.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="205551.780821918" NEventsMax="-1" Type="MC" Version="ZJets3" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.ZJets3.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="273035.980902778" NEventsMax="-1" Type="MC" Version="ZJets4" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.ZJets4.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="0.620020594614727" NEventsMax="-1" Type="MC" Version="QCD15to20" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.QCD15to20.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="4.52614526936478" NEventsMax="-1" Type="MC" Version="QCD20to30" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.QCD20to30.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="11.8243713862617" NEventsMax="-1" Type="MC" Version="QCD30to50" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.QCD30to50.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="58.6357382698896" NEventsMax="-1" Type="MC" Version="QCD50to80" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.QCD50to80.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="227.37089596519" NEventsMax="-1" Type="MC" Version="QCD80to120" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.QCD80to120.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="1131.46675884318" NEventsMax="-1" Type="MC" Version="QCD120to170" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.QCD120to170.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="3040.98659333702" NEventsMax="-1" Type="MC" Version="QCD170to300" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.QCD170to300.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="46311.0850249795" NEventsMax="-1" Type="MC" Version="QCD300to470" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.QCD300to470.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="284405.941433377" NEventsMax="-1" Type="MC" Version="QCD470to600" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.QCD470to600.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="1401224.66913191" NEventsMax="-1" Type="MC" Version="QCD600to800" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.QCD600to800.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="10178081.3002839" NEventsMax="-1" Type="MC" Version="QCD800to1000" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.QCD800to1000.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="41678691.4747526" NEventsMax="-1" Type="MC" Version="QCD1000" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.QCD1000.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="88919.74522293" NEventsMax="-1" Type="MC" Version="singleTbars" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.singleTbars.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="78783.06122449" NEventsMax="-1" Type="MC" Version="singleTbart" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.singleTbart.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="46023.167830989" NEventsMax="-1" Type="MC" Version="singleTbartW" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.singleTbartW.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="91906.382978723" NEventsMax="-1" Type="MC" Version="singleTs" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.singleTs.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="81375.48849327" NEventsMax="-1" Type="MC" Version="singleTt" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.singleTt.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="46406.738711067" NEventsMax="-1" Type="MC" Version="singleTtW" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.singleTtW.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="296999.434692056" NEventsMax="-1" Type="MC" Version="doubleWW" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.doubleWW.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="751808.313539192" NEventsMax="-1" Type="MC" Version="doubleWZ" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.doubleWZ.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+  <InputData Lumi="1882266.166281755" NEventsMax="-1" Type="MC" Version="doubleZZ" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.doubleZZ.root"  Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" />
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+
+  
+  <InputData Lumi="1" NEventsMax="-1" Type="DATA" Version="DATA" Cacheable="False">
+   <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.DATA.DATA.root"  Lumi="0.0"/>
+   <InputTree Name="AnalysisTree" /> 
+   <OutputTree Name="AnalysisTree"/>
+ </InputData> 
+  
+ /-->
+  
+		<!--<InputData Lumi="474297.5" NEventsMax="-1" Type="DATA" Version="TEST" Cacheable="False"-->
+		        <!--In FileName="/scratch/hh/dust/naf/cms/user/peiffer/Analysis53X/SelectionMuon/ZprimeSelectionCycle.MC.TTbar.root" Lumi="0.0"/--> 
+                        <!--In FileName="/afs/naf.desy.de/user/u/usai/scratch/sw/subjetbtag/CMSSW_5_3_8/src/UHHAnalysis/NtupleWriter/ntuple.root" Lumi="0.0"/--> 
+                     <!--   <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbsm_prova/ntuple.root" Lumi="0.0"/> -->
+                <!--       <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.DATA.TEST.root" Lumi="0.0"/-->
+		<!--	<InputTree Name="AnalysisTree" /--> 
+		<!--</InputData-->
+		
+		
+		<UserConfig>
+
+		   <Item Name="JetCollection" Value="goodPatJetsPFlow" /> 
+		   <Item Name="ElectronCollection" Value="selectedPatElectronsPFlowLoose" /> 
+		   <Item Name="MuonCollection" Value="selectedPatMuonsPFlowLoose" />
+		   <Item Name="TauCollection" Value="selectedPatTausPFlow" />
+<!--		   <Item Name="PhotonCollection" Value="patPhotons" /> -->
+		   <Item Name="PrimaryVertexCollection" Value="goodOfflinePrimaryVertices" />
+		   <Item Name="METName" Value="patMETsPFlow" /> 
+		   <Item Name="TopJetCollection" Value="goodPatJetsCAHEPTopTagPFPacked" />
+<!--                   <Item Name="TopJetCollection" Value="goodPatJetsCATopTagPF" /> -->
+  <!--		   <Item Name="TopJetCollectionGen" Value="caTopTagGen" />-->
+<!--		   <Item Name="PrunedJetCollection" Value="goodPatJetsCA8PrunedPF" /> --> 
+		   <Item Name="GenParticleCollection" Value="GenParticles" /> 
+		      
+		      
+                      <Item Name="PU_Filename_MC" Value="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Pileup/PileUpHistoCycle" />
+                      <Item Name="PU_Filename_Data" Value="/scratch/hh/dust/naf/cms/user/usai/pileup/MyDataPileupHistogram_2.root" />
+                      <Item Name="PU_Histname_Data" Value="pileup" />
+                      <Item Name="PU_Histname_MC" Value="N_pileup_hist" />
+		       
+		      
+		   <Item Name="CSVOperatingPoint" Value="0.679" />
+		   <Item Name="BTagEffi_Filename_MC" Value="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle" />
+		   <Item Name="BTaggingMode" Value="default" />
+		      
+		    <!--  <Item Name="writeTTbarReco" Value="True" />  
+		      <Item Name="readTTbarReco" Value="True" /> -->
+
+<!--  		   <Item Name="LumiFilePath" Value="/scratch/hh/dust/naf/cms/user/peiffer/Analysis53X/LumiFiles/" /> 
+		   <Item Name="LumiFileName" Value="Mu40_206745.root" /> 
+		   <Item Name="LumiTrigger" Value="HLT_Mu40_eta2p1_v" /> -->
+
+		  <!-- <Item Name="BTaggingScaleFactors" Value="true" />-->
+
+		   <!-- <Item Name="LeptonScaleFactors" Value="MuonRunA 1051.4 MuonRunB 4778 MuonRunC 11946" />-->
+		      
+                </UserConfig>
+	</Cycle>
+</JobConfiguration>
+

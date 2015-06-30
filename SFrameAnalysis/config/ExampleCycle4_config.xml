@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE JobConfiguration PUBLIC "" "JobConfig.dtd" [
+<!ENTITY TTbarsemi SYSTEM "/afs/naf.desy.de/user/u/usai/public/mc/ttbsm4">
+]>
+
+
+
+<!-- <JobConfiguration JobName="ExampleCycleJob" OutputLevel="VERBOSE"> aa-->
+<JobConfiguration JobName="ExampleCycleJob" OutputLevel="INFO">
+<!--
+	<Library Name="libfastjet"/>
+	<Library Name="libSFramePlugIns"/>
+	<Library Name="libSFrameTools"/>
+	<Library Name="libAnalysis"/>
+-->
+
+        <Library Name="libfastjet" />
+        <Library Name="libfastjettools" />
+        <Library Name="libJetMETObjects" />
+        <Library Name="libSFrameTools" />
+        <Library Name="libAnalysis" />
+        <Library Name="libSFramePlugIns" />
+
+
+	<Package Name="SFrameCore.par" />
+	<Package Name="SFramePlugIns.par" />
+	<Package Name="Analysis.par" />
+
+<!--	<Cycle Name="ExampleCycle" RunMode="PROOF" ProofServer="lite://"  ProofWorkDir="" OutputDirectory="./" PostFix="" TargetLumi="1.0"> 15916.0-->
+<!--	<Cycle Name="ExampleCycle"  RunMode="PROOF" ProofServer="lite://"  ProofWorkDir="/scratch/hh/lustre/cms/user/peiffer/PROOF/" OutputDirectory="Output/" PostFix="" TargetLumi="1" > -->
+	<Cycle Name="ExampleCycle4" RunMode="PROOF" ProofServer="lite://"  ProofWorkDir="/scratch/hh/dust/naf/cms/user/usai/PROOF" OutputDirectory="/scratch/hh/dust/naf/cms/user/usai/" PostFix="" TargetLumi="1.0"> 
+<!--
+		<InputData Lumi="1.0" NEventsMax="-1" Type="DATA" Version="DATA" Cacheable="False">
+		        <In FileName="/scratch/hh/dust/naf/cms/user/peiffer/Analysis53X/SelectionMuon/ZprimeSelectionCycle.DATA.DATA.root" Lumi="0.0"/> 
+			<InputTree Name="AnalysisTree" /> 
+		</InputData> 
+-->
+<!--		<InputData Lumi="474297.5" NEventsMax="-1" Type="MC" Version="TTbarsemi" Cacheable="False">-->
+		        <!--In FileName="/scratch/hh/dust/naf/cms/user/peiffer/Analysis53X/SelectionMuon/ZprimeSelectionCycle.MC.TTbar.root" Lumi="0.0"/--> 
+                        <!--In FileName="/afs/naf.desy.de/user/u/usai/scratch/sw/subjetbtag/CMSSW_5_3_8/src/UHHAnalysis/NtupleWriter/ntuple.root" Lumi="0.0"/--> 
+                     <!--   <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbsm_prova/ntuple.root" Lumi="0.0"/> -->
+ <!--                      <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.TTbarsemi.root" Lumi="0.0"/>
+			<InputTree Name="AnalysisTree" /> 
+		</InputData> 
+-->		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+  <!--474297.5/-->
+    <!--246164.208753925/-->
+		
+  <InputData Lumi="1.0" NEventsMax="-1" Type="MC" Version="TTbarsemi" Cacheable="False">
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1_1_by2.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_10_1_pNb.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_100_1_phR.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1000_1_Wyj.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1001_1_zR0.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1002_1_kpE.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1003_1_Uqr.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1004_1_suo.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1005_1_gsN.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1006_1_fhj.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1007_1_J5J.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1008_1_GmY.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1009_1_C4F.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_101_1_XZA.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1010_1_3l8.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1011_1_NjX.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1012_1_erq.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1013_1_E0P.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1014_1_h1e.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1015_1_wt3.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1016_1_bdD.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1017_1_FCa.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1018_1_ED4.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1019_1_5ei.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_102_1_iSa.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1020_1_1Q2.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1021_1_wpb.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1022_1_xRI.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1023_1_1QT.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1024_1_Q0Y.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1025_1_gtM.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1026_1_bTQ.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1027_1_fpZ.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1028_1_RQa.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1029_1_b54.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_103_1_QqT.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1030_1_Cdq.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1031_1_qEk.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1032_1_S4B.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1033_1_Hx4.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1034_1_qtZ.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1035_1_cEc.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1036_1_GE4.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1037_1_Mdu.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1038_1_z1I.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1039_1_fuW.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_104_1_Qlf.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1040_1_OwQ.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1041_1_PSJ.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1042_1_r2O.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1043_1_PHW.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1044_1_J4q.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1045_1_YM5.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1046_1_15X.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1047_1_58b.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1048_1_Yqx.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1049_1_pgr.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_105_1_bTo.root" Lumi="0.0"/>
+    <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbargen/ntuple_1050_1_mif.root" Lumi="0.0"/>
+    <InputTree Name="AnalysisTree" /> 
+    <OutputTree Name="AnalysisTree" />
+  </InputData>
+  
+ 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!--<InputData Lumi="474297.5" NEventsMax="-1" Type="DATA" Version="TEST" Cacheable="False"-->
+		        <!--In FileName="/scratch/hh/dust/naf/cms/user/peiffer/Analysis53X/SelectionMuon/ZprimeSelectionCycle.MC.TTbar.root" Lumi="0.0"/--> 
+                        <!--In FileName="/afs/naf.desy.de/user/u/usai/scratch/sw/subjetbtag/CMSSW_5_3_8/src/UHHAnalysis/NtupleWriter/ntuple.root" Lumi="0.0"/--> 
+                     <!--   <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbsm_prova/ntuple.root" Lumi="0.0"/> -->
+                <!--       <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.DATA.TEST.root" Lumi="0.0"/-->
+		<!--	<InputTree Name="AnalysisTree" /--> 
+		<!--</InputData-->
+		
+		
+		<UserConfig>
+
+		   <Item Name="JetCollection" Value="goodPatJetsPFlow" /> 
+		   <Item Name="ElectronCollection" Value="selectedPatElectronsPFlowLoose" /> 
+		   <Item Name="MuonCollection" Value="selectedPatMuonsPFlowLoose" />
+		   <Item Name="TauCollection" Value="selectedPatTausPFlow" />
+<!--		   <Item Name="PhotonCollection" Value="patPhotons" /> -->
+		   <Item Name="PrimaryVertexCollection" Value="goodOfflinePrimaryVertices" />
+		   <Item Name="METName" Value="patMETsPFlow" /> 
+		   <Item Name="TopJetCollection" Value="goodPatJetsCAHEPTopTagPFPacked" />
+<!--                   <Item Name="TopJetCollection" Value="goodPatJetsCATopTagPF" /> -->
+  <!--		   <Item Name="TopJetCollectionGen" Value="caTopTagGen" />-->
+<!--		   <Item Name="PrunedJetCollection" Value="goodPatJetsCA8PrunedPF" /> --> 
+		   <Item Name="GenParticleCollection" Value="GenParticles" /> 
+		      
+		      
+                      <Item Name="PU_Filename_MC" Value="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Pileup/PileUpHistoCycle" />
+                      <Item Name="PU_Filename_Data" Value="/scratch/hh/dust/naf/cms/user/usai/pileup/MyDataPileupHistogram.root" />
+                      <Item Name="PU_Histname_Data" Value="pileup" />
+                      <Item Name="PU_Histname_MC" Value="N_pileup_hist" />
+		      
+		      
+		   <Item Name="CSVOperatingPoint" Value="0.679" />
+		   <Item Name="BTagEffi_Filename_MC" Value="/scratch/hh/dust/naf/cms/user/usai/ExampleCycle3" />
+		   <Item Name="BTaggingMode" Value="default" />
+		      
+		    <!--  <Item Name="writeTTbarReco" Value="True" />  
+		      <Item Name="readTTbarReco" Value="True" /> -->
+
+<!--  		   <Item Name="LumiFilePath" Value="/scratch/hh/dust/naf/cms/user/peiffer/Analysis53X/LumiFiles/" /> 
+		   <Item Name="LumiFileName" Value="Mu40_206745.root" /> 
+		   <Item Name="LumiTrigger" Value="HLT_Mu40_eta2p1_v" /> -->
+
+		  <!-- <Item Name="BTaggingScaleFactors" Value="true" />-->
+
+		   <!-- <Item Name="LeptonScaleFactors" Value="MuonRunA 1051.4 MuonRunB 4778 MuonRunC 11946" />-->
+		      
+                </UserConfig>
+	</Cycle>
+</JobConfiguration>
+

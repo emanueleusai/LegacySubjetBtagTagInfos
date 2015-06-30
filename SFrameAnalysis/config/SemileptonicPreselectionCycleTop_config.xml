@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE JobConfiguration PUBLIC "" "JobConfig.dtd"
+[
+<!ENTITY DataA SYSTEM "/afs/naf.desy.de/user/u/usai/public/localdata/Run2012A-13Jul2012">
+<!ENTITY DataArec SYSTEM "/afs/naf.desy.de/user/u/usai/public/localdata/Run2012Arecover06Aug2012">
+<!ENTITY DataB1 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localdata/Run2012B13Jul20121">
+<!ENTITY DataB2 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localdata/Run2012B13Jul20122">
+<!ENTITY DataC24 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localdata/Run2012C24Aug">
+<!ENTITY DataCprompt1 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localdata/Run2012CPromptRecov21">
+<!ENTITY DataCprompt2 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localdata/Run2012CPromptRecov22">
+<!ENTITY DataCprompt3 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localdata/Run2012CPromptRecov23">
+<!ENTITY DataDprompt1 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localdata/Run2012DPromptRecov11">
+<!ENTITY DataDprompt2 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localdata/Run2012DPromptRecov12">
+<!ENTITY DataDprompt3 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localdata/Run2012DPromptRecov13">
+<!ENTITY DataDprompt4 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localdata/Run2012DPromptRecov14">
+
+<!ENTITY QCD15to20 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/QCD15to20">
+<!ENTITY QCD20to30 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/QCD20to30">
+<!ENTITY QCD30to50 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/QCD30to50">
+<!ENTITY QCD50to80 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/QCD50to80">
+<!ENTITY QCD80to120 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/QCD80to120">
+<!ENTITY QCD120to170 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/QCD120to170">
+<!ENTITY QCD170to300 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/QCD170to300">
+<!ENTITY QCD300to470 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/QCD300to470">
+<!ENTITY QCD470to600 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/QCD470to600">
+<!ENTITY QCD600to800 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/QCD600to800">
+<!ENTITY QCD800to1000 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/QCD800to1000">
+<!ENTITY QCD1000 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/QCD1000">
+
+<!ENTITY WJets1 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/WJets1">
+<!ENTITY WJets2 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/WJets2">
+<!ENTITY WJets3 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/WJets3">
+<!ENTITY WJets4 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/WJets4">
+
+<!ENTITY singleTbars SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/Tbars">
+<!ENTITY singleTbart SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/Tbart">
+<!ENTITY singleTbartW SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/TbartW">
+<!ENTITY singleTs SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/Ts">
+<!ENTITY singleTt SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/Tt">
+<!ENTITY singleTtW SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/TtW">
+
+<!ENTITY doubleWW SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/WW">
+<!ENTITY doubleWZ SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/WZ">
+<!ENTITY doubleZZ SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/ZZ">
+
+<!ENTITY ZJets1 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/DY1">
+<!ENTITY ZJets2 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/DY2">
+<!ENTITY ZJets3 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/DY3">
+<!ENTITY ZJets4 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/DY4">
+
+<!ENTITY TTbarlept SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/ttfulllept">
+<!ENTITY TTbarhad1 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/had1bis">
+<!ENTITY TTbarhad2 SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/had2bis">
+<!ENTITY TTbarsemi SYSTEM "/afs/naf.desy.de/user/u/usai/public/localmc/ttbsm4">
+
+]>
+
+<JobConfiguration JobName="ExampleCycleJob" OutputLevel="INFO">
+
+
+        <Library Name="libfastjet" />
+        <Library Name="libfastjettools" />
+        <Library Name="libJetMETObjects" />
+        <Library Name="libSFrameTools" />
+        <Library Name="libAnalysis" />
+        <Library Name="libSFramePlugIns" />
+
+
+	<Package Name="SFrameCore.par" />
+	<Package Name="SFramePlugIns.par" />
+	<Package Name="Analysis.par" />
+
+
+ <Cycle Name="SemileptonicPreselectionCycle"  RunMode="PROOF" ProofServer="lite://"  ProofWorkDir="/scratch/hh/dust/naf/cms/user/usai/PROOF/" OutputDirectory="/scratch/hh/dust/naf/cms/user/usai/blah/" PostFix="" TargetLumi="15916.0" >
+	   <!--<Cycle Name="SemileptonicPreselectionCycle" OutputDirectory="/scratch/hh/dust/naf/cms/user/usai/preselection/" PostFix="" TargetLumi="15916.0">-->
+	
+	     <!--
+		<InputData Lumi="79320.454545455" NEventsMax="-1" Type="MC" Version="singleTbars" Cacheable="True">
+                        &singleTbars;
+                        <InputTree Name="AnalysisTree" /> 
+			 <OutputTree Name="AnalysisTree" />
+                </InputData>
+
+		<InputData Lumi="62872.475570033" NEventsMax="-1" Type="MC" Version="singleTbart" Cacheable="True">
+                        &singleTbart;
+                        <InputTree Name="AnalysisTree" /> 
+			 <OutputTree Name="AnalysisTree" />
+                </InputData>
+
+
+		<InputData Lumi="44275.945945946" NEventsMax="-1" Type="MC" Version="singleTbartW" Cacheable="True">
+                        &singleTbartW;
+                        <InputTree Name="AnalysisTree" /> 
+			 <OutputTree Name="AnalysisTree" />
+                </InputData>
+
+		<InputData Lumi="68384.168865435" NEventsMax="-1" Type="MC" Version="singleTs" Cacheable="True">
+                        &singleTs;
+                        <InputTree Name="AnalysisTree" /> 
+			 <OutputTree Name="AnalysisTree" />
+                </InputData>
+
+		<InputData Lumi="66456.648936171" NEventsMax="-1" Type="MC" Version="singleTt" Cacheable="True">
+                        &singleTt;
+                        <InputTree Name="AnalysisTree" /> 
+			 <OutputTree Name="AnalysisTree" />
+                </InputData>
+
+		<InputData Lumi="44644.954954955" NEventsMax="-1" Type="MC" Version="singleTtW" Cacheable="True">
+                        &singleTtW;
+                        <InputTree Name="AnalysisTree" /> 
+			 <OutputTree Name="AnalysisTree" />
+                </InputData>
+		-->
+		<InputData Lumi="489508.631683986" NEventsMax="-1" Type="MC" Version="TTbarlept" Cacheable="True">
+                       &TTbarlept;
+                        <InputTree Name="AnalysisTree" /> 
+			 <OutputTree Name="AnalysisTree" />
+                </InputData>
+		
+                <InputData Lumi="386166.402125665" NEventsMax="-1" Type="MC" Version="TTbarhad" Cacheable="True">
+                       &TTbarhad1;
+		       &TTbarhad2;
+                        <InputTree Name="AnalysisTree" /> 
+			 <OutputTree Name="AnalysisTree" />
+                </InputData>
+		
+		<InputData Lumi="246164.208753925" NEventsMax="-1" Type="MC" Version="TTbarsemi" Cacheable="True">
+                       &TTbarsemi;
+                        <InputTree Name="AnalysisTree" /> 
+			 <OutputTree Name="AnalysisTree" />
+                </InputData>
+		
+		<UserConfig>
+
+		   <Item Name="JetCollection" Value="goodPatJetsPFlow" /> 
+		   <Item Name="ElectronCollection" Value="selectedPatElectronsPFlowLoose" /> 
+		   <Item Name="MuonCollection" Value="selectedPatMuonsPFlowLoose" />
+		   <Item Name="TauCollection" Value="selectedPatTausPFlow" />
+		   <Item Name="PrimaryVertexCollection" Value="goodOfflinePrimaryVertices" />
+		   <Item Name="METName" Value="patMETsPFlow" /> 
+		   <Item Name="TopJetCollection" Value="goodPatJetsCAHEPTopTagPFPacked" />
+		   <Item Name="GenParticleCollection" Value="GenParticles" /> 
+		      
+		      
+                      <Item Name="PU_Filename_MC" Value="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Pileup/PileUpHistoCycle" />
+                      <Item Name="PU_Filename_Data" Value="/scratch/hh/dust/naf/cms/user/usai/pileup/MyDataPileupHistogram_2.root" />
+                      <Item Name="PU_Histname_Data" Value="pileup" />
+                      <Item Name="PU_Histname_MC" Value="N_pileup_hist" />
+		       
+		      
+		   <Item Name="CSVOperatingPoint" Value="0.679" />
+		   <Item Name="BTagEffi_Filename_MC" Value="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle" />
+		   <Item Name="BTaggingMode" Value="default" />
+		      
+		      
+                </UserConfig>
+	</Cycle>
+</JobConfiguration>
+

@@ -1,0 +1,6 @@
+cd ../SFrameTools
+make distclean
+make -j10
+cd ../SFrameAnalysis
+make distclean
+make -j10

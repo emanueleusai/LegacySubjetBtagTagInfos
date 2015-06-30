@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE JobConfiguration PUBLIC "" "JobConfig.dtd" [
+<!ENTITY TTbarsemi SYSTEM "/afs/naf.desy.de/user/u/usai/public/mc/ttbsm4">
+]>
+
+
+
+<!-- <JobConfiguration JobName="ExampleCycleJob" OutputLevel="VERBOSE"> aa-->
+<JobConfiguration JobName="ExampleCycleJob" OutputLevel="INFO">
+<!--
+	<Library Name="libfastjet"/>
+	<Library Name="libSFramePlugIns"/>
+	<Library Name="libSFrameTools"/>
+	<Library Name="libAnalysis"/>
+-->
+
+        <Library Name="libfastjet" />
+        <Library Name="libfastjettools" />
+        <Library Name="libJetMETObjects" />
+        <Library Name="libSFrameTools" />
+        <Library Name="libAnalysis" />
+        <Library Name="libSFramePlugIns" />
+
+
+	<Package Name="SFrameCore.par" />
+	<Package Name="SFramePlugIns.par" />
+	<Package Name="Analysis.par" />
+
+<!--	<Cycle Name="ExampleCycle" RunMode="PROOF" ProofServer="lite://"  ProofWorkDir="" OutputDirectory="./" PostFix="" TargetLumi="1.0"> 15916.0-->
+<!--	<Cycle Name="ExampleCycle"  RunMode="PROOF" ProofServer="lite://"  ProofWorkDir="/scratch/hh/lustre/cms/user/peiffer/PROOF/" OutputDirectory="Output/" PostFix="" TargetLumi="1" > -->
+  <!--<Cycle Name="ExampleCycle5" RunMode="PROOF" ProofServer="lite://"  ProofWorkDir="/scratch/hh/dust/naf/cms/user/usai/PROOF" OutputDirectory="/scratch/hh/dust/naf/cms/user/usai/" PostFix="" TargetLumi="1.0"> -->
+    <Cycle Name="ExampleCycle5" OutputDirectory="/scratch/hh/dust/naf/cms/user/usai/" PostFix="" TargetLumi="1.0"> 
+<!--
+		<InputData Lumi="1.0" NEventsMax="-1" Type="DATA" Version="DATA" Cacheable="False">
+		        <In FileName="/scratch/hh/dust/naf/cms/user/peiffer/Analysis53X/SelectionMuon/ZprimeSelectionCycle.DATA.DATA.root" Lumi="0.0"/> 
+			<InputTree Name="AnalysisTree" /> 
+		</InputData> 
+-->
+<!--		<InputData Lumi="474297.5" NEventsMax="-1" Type="MC" Version="TTbarsemi" Cacheable="False">-->
+		        <!--In FileName="/scratch/hh/dust/naf/cms/user/peiffer/Analysis53X/SelectionMuon/ZprimeSelectionCycle.MC.TTbar.root" Lumi="0.0"/--> 
+                        <!--In FileName="/afs/naf.desy.de/user/u/usai/scratch/sw/subjetbtag/CMSSW_5_3_8/src/UHHAnalysis/NtupleWriter/ntuple.root" Lumi="0.0"/--> 
+                     <!--   <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbsm_prova/ntuple.root" Lumi="0.0"/> -->
+ <!--                      <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.TTbarsemi.root" Lumi="0.0"/>
+			<InputTree Name="AnalysisTree" /> 
+		</InputData> 
+-->		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+  <!--474297.5/-->
+    <!--246164.208753925/-->
+		
+    
+    <InputData Lumi="1.0" NEventsMax="-1" Type="MC" Version="TTbarsemi" Cacheable="False">
+      <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.MC.TTbarsemi.root"  Lumi="0.0"/>
+      <InputTree Name="AnalysisTree" /> 
+      <OutputTree Name="AnalysisTree" />
+    </InputData>
+    
+    
+    
+
+ 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!--<InputData Lumi="474297.5" NEventsMax="-1" Type="DATA" Version="TEST" Cacheable="False"-->
+		        <!--In FileName="/scratch/hh/dust/naf/cms/user/peiffer/Analysis53X/SelectionMuon/ZprimeSelectionCycle.MC.TTbar.root" Lumi="0.0"/--> 
+                        <!--In FileName="/afs/naf.desy.de/user/u/usai/scratch/sw/subjetbtag/CMSSW_5_3_8/src/UHHAnalysis/NtupleWriter/ntuple.root" Lumi="0.0"/--> 
+                     <!--   <In FileName="/scratch/hh/dust/naf/cms/user/usai/ttbsm_prova/ntuple.root" Lumi="0.0"/> -->
+                <!--       <In FileName="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Semileptonicselection/SemileptonicselectionCycle.DATA.TEST.root" Lumi="0.0"/-->
+		<!--	<InputTree Name="AnalysisTree" /--> 
+		<!--</InputData-->
+		
+		
+		<UserConfig>
+
+		   <Item Name="JetCollection" Value="goodPatJetsPFlow" /> 
+		   <Item Name="ElectronCollection" Value="selectedPatElectronsPFlowLoose" /> 
+		   <Item Name="MuonCollection" Value="selectedPatMuonsPFlowLoose" />
+		   <Item Name="TauCollection" Value="selectedPatTausPFlow" />
+<!--		   <Item Name="PhotonCollection" Value="patPhotons" /> -->
+		   <Item Name="PrimaryVertexCollection" Value="goodOfflinePrimaryVertices" />
+		   <Item Name="METName" Value="patMETsPFlow" /> 
+		   <Item Name="TopJetCollection" Value="goodPatJetsCAHEPTopTagPFPacked" />
+<!--                   <Item Name="TopJetCollection" Value="goodPatJetsCATopTagPF" /> -->
+  <!--		   <Item Name="TopJetCollectionGen" Value="caTopTagGen" />-->
+<!--		   <Item Name="PrunedJetCollection" Value="goodPatJetsCA8PrunedPF" /> --> 
+		   <Item Name="GenParticleCollection" Value="GenParticles" /> 
+		      
+		      
+                      <Item Name="PU_Filename_MC" Value="/scratch/hh/dust/naf/cms/user/imarches/newSFrame/Pileup/PileUpHistoCycle" />
+                      <Item Name="PU_Filename_Data" Value="/scratch/hh/dust/naf/cms/user/usai/pileup/MyDataPileupHistogram.root" />
+                      <Item Name="PU_Histname_Data" Value="pileup" />
+                      <Item Name="PU_Histname_MC" Value="N_pileup_hist" />
+		      
+		      
+		   <Item Name="CSVOperatingPoint" Value="0.679" />
+		   <Item Name="BTagEffi_Filename_MC" Value="/scratch/hh/dust/naf/cms/user/usai/ExampleCycle3" />
+		   <Item Name="BTaggingMode" Value="default" />
+		      
+		    <!--  <Item Name="writeTTbarReco" Value="True" />  
+		      <Item Name="readTTbarReco" Value="True" /> -->
+
+<!--  		   <Item Name="LumiFilePath" Value="/scratch/hh/dust/naf/cms/user/peiffer/Analysis53X/LumiFiles/" /> 
+		   <Item Name="LumiFileName" Value="Mu40_206745.root" /> 
+		   <Item Name="LumiTrigger" Value="HLT_Mu40_eta2p1_v" /> -->
+
+		  <!-- <Item Name="BTaggingScaleFactors" Value="true" />-->
+
+		   <!-- <Item Name="LeptonScaleFactors" Value="MuonRunA 1051.4 MuonRunB 4778 MuonRunC 11946" />-->
+		      
+                </UserConfig>
+	</Cycle>
+</JobConfiguration>
+
